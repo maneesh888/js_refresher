@@ -44,14 +44,28 @@ const person = {
 //person.greet();
 const hobbies = ['Sports', 'Cooking']
 
-for (let hobby of hobbies) {
-    console.log(hobby)
-}
+// for (let hobby of hobbies) {
+//     console.log(hobby)
+// }
 
 // console.log(hobbies.map(hobby => {
 //     return 'Hobby: ' + hobby
 // }));
 
-console.log(hobbies.map(hobby => 'Hobby: ' + hobby));
+//console.log(hobbies.map(hobby => 'Hobby: ' + hobby));
+
+hobbies.push('Programming');
+console.log(hobbies);
+
+// Spread operators
+
+const copiedArray = [...hobbies];
+console.log(copiedArray);
+
+const copiedPerson = {...person};
+console.log(copiedPerson);
 
 
+// Rest operator
+const toArray = (...args) => args;
+console.log(toArray(1,2,3));
