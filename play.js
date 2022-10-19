@@ -1,8 +1,8 @@
-const name = "Maneesh";
-let age = 29;
-const hasHobbies = true;
+// const name = "Maneesh";
+// let age = 29;
+// const hasHobbies = true;
 
-age = 31;
+// age = 31;
 
 // const summarizerUser = function (userName, userAge, userHasHobby) {
 //     return (
@@ -41,9 +41,21 @@ const person = {
         console.log('Hi, I am ' + this.name)
     }
 }
-//person.greet();
-const hobbies = ['Sports', 'Cooking']
 
+// Object Destructuring
+const printName = ({ name }) => console.log(name);
+printName(person);
+
+const { name, age } = person;
+console.log(name, age) ;
+
+const hobbies = ['Sports', 'Cooking'];
+const [ h1, h2 ] = hobbies;
+console.log(h1,h2);
+
+
+
+//person.greet();
 // for (let hobby of hobbies) {
 //     console.log(hobby)
 // }
@@ -54,18 +66,18 @@ const hobbies = ['Sports', 'Cooking']
 
 //console.log(hobbies.map(hobby => 'Hobby: ' + hobby));
 
-hobbies.push('Programming');
-console.log(hobbies);
+// hobbies.push('Programming');
+// console.log(hobbies);
 
-// Spread operators
+// // Spread operators
 
-const copiedArray = [...hobbies];
-console.log(copiedArray);
+// const copiedArray = [...hobbies];
+// console.log(copiedArray);
 
-const copiedPerson = {...person};
-console.log(copiedPerson);
+// const copiedPerson = {...person};
+// console.log(copiedPerson);
 
 
-// Rest operator
-const toArray = (...args) => args;
-console.log(toArray(1,2,3));
+// // Rest operator
+// const toArray = (...args) => args;
+// console.log(toArray(1,2,3));
