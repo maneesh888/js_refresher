@@ -1,12 +1,17 @@
-const fetchData = callBack => {
-    setTimeout(()=> {
-        console.log('Done!');
-    }, 1500)
+const fetchData = () => { // Fetch data returns a promise and .then can be used directly with . operator
+
+    const promise = new Promise((resolve, reject) => {
+        setTimeout(()=> {
+            resolve('Done!');
+        }, 1500)
+    })
+return promised
+    
 }
 
 setTimeout(()=> {
     console.log('Timer is done!');
-    fetchData(text => {
+    fetchData().then(text => {
         console.log(text);
     })
 }, 2000)
